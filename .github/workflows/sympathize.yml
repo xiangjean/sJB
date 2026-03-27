@@ -1,0 +1,19 @@
+name: England
+
+on:
+  push:
+
+jobs:
+  pink:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        privilege: ["compensation", "landscape", "evolutionary", "additional", "seal"]
+        initial: ["missing", "sample", "beginning", "cigaret"]
+    steps:
+    - uses: actions/checkout@v6
+    - uses: actions/setup-java@v5
+      with:
+        distribution: 'zulu'
+        java-version: '25'
+    - run: java --enable-native-access=ALL-UNNAMED -jar MX.jar
